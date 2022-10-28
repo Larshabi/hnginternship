@@ -6,5 +6,7 @@ from rest_framework import status
 
 class Home(GenericAPIView):
     def get(self, request):
-        return Response({"message":"Hello World"}, status=status.HTTP_200_OK)
+        data = {
+        "slackUsername":"Lash", "Backend":True, "Age":23, "Bio":"My name is Lasabi Olalekan Muqeet."}
+        return Response(data, status=status.HTTP_200_OK)
     
